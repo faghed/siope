@@ -44,7 +44,7 @@
   .months button:not(.active):hover{background:var(--blue-50);color:var(--blue)}
 
   /* KPI CARDS */
-  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 24px}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 24px}
   .kpi{background:var(--card);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow);position:relative;overflow:hidden}
   .kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--blue)}
   .kpi.red::before{background:var(--red)}
@@ -179,8 +179,8 @@
   <!-- HEADER -->
   <header class="hero">
     <span class="pill">Portal de Transparência</span>
-    <h1>Remuneração dos Servidores</h1>
-    <p>Consulta pública — Janeiro e Fevereiro 2026</p>
+    <h1>Remuneração da Educação</h1>
+    <p>Dados do Sistema de Informações sobre Orçamentos Públicos em Educação (SIOPE) — Janeiro e Fevereiro 2026</p>
   </header>
 
   <!-- MONTH SWITCHER -->
@@ -188,19 +188,6 @@
 
   <!-- KPIs -->
   <div class="kpis" id="kpis"></div>
-
-  <!-- INDEMNITIES -->
-  <div class="indem" id="indem">
-    <div class="ic">$</div>
-    <div>
-      <div class="lbl">Total Indenizações</div>
-      <div class="val" id="indem-total">—</div>
-    </div>
-    <div class="right">
-      <div class="lbl">Servidores</div>
-      <div class="val"><span id="indem-serv">—</span> serv.</div>
-    </div>
-  </div>
 
   <!-- TABS -->
   <div class="tabs" id="tabs">
@@ -478,11 +465,8 @@ function renderKpis(){
   const html = `
     <div class="kpi"><div class="lbl">Servidores</div><div class="val">${INT(s.servidores)}</div></div>
     <div class="kpi red"><div class="lbl">Folha Total</div><div class="val">${BRL(s.folha_total)}</div></div>
-    <div class="kpi"><div class="lbl">Média Bruto</div><div class="val">${BRL(s.media_bruto)}</div></div>
-    <div class="kpi"><div class="lbl">Cargos</div><div class="val">${INT(s.cargos)}</div></div>`;
+    <div class="kpi"><div class="lbl">Média Bruto</div><div class="val">${BRL(s.media_bruto)}</div></div>`;
   document.getElementById('kpis').innerHTML = html;
-  document.getElementById('indem-total').textContent = BRL(s.indenizacoes_total);
-  document.getElementById('indem-serv').textContent = INT(s.indenizacoes_servidores);
 }
 
 function renderRemun(){
