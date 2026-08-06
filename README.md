@@ -33,4 +33,4 @@ site/
 
 ## Origem dos dados
 
-Planilha **SIOPE — Janeiro e Fevereiro 2026** fornecida pela administração municipal. 4.687 registros, 45 escolas, 11 categorias profissionais.
+Planilha **SIOPE — Janeiro a Abril 2026** fornecida pela administração municipal. 4.687 registros, 45 escolas, 11 categorias profissionais.
