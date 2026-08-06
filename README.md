@@ -1,4 +1,4 @@
-# Portal de Remuneração — SIOPE Jan/Fev 2026
+# Portal de Remuneração — SIOPE Jan/Abr 2026
 
 Sistema HTML5 leve para consulta pública dos dados de remuneração dos servidores, pronto para hospedagem no GitHub Pages e incorporação em sites Wix.
 
